@@ -9,7 +9,7 @@ id = f2c5a8f8-a5e1-46fa-9846-5286e159fc17
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"44538706-6d0a8106-6c66-47a8-86f0-62af4943cb4c","path":"Bakery Recipes.json","metaData":{}}
+files[] = {"id":"44538706-f1ee88cf-7c87-4733-9255-41f8ef7ed747","path":"Bakery Requests.json","metaData":{"generateCollectionPreferences":"{\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"parametersResolution\":\"Schema\",\"folderStrategy\":\"Paths\",\"includeAuthInfoInExample\":true,\"enableOptionalParameters\":true,\"keepImplicitHeaders\":false,\"includeDeprecated\":true,\"alwaysInheritAuthentication\":false,\"updateCollectionSync\":true,\"requestParametersResolution\":\"Schema\",\"exampleParametersResolution\":\"Schema\"}"}}
 
 [config.relations.collections.metaData]
 

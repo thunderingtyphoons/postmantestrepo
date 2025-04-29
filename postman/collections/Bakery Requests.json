@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "6d0a8106-6c66-47a8-86f0-62af4943cb4c",
-		"name": "Bakery Recipes",
-		"description": "API for managing recipes in a bakery system",
+		"_postman_id": "f1ee88cf-7c87-4733-9255-41f8ef7ed747",
+		"name": "Bakery Requests",
+		"description": "API for managing a bakery system",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "44538706-6d0a8106-6c66-47a8-86f0-62af4943cb4c"
+		"_uid": "44538706-f1ee88cf-7c87-4733-9255-41f8ef7ed747"
 	},
 	"item": [
 		{
@@ -15,7 +15,7 @@
 					"item": [
 						{
 							"name": "Get a recipe by ID",
-							"id": "46df9010-6df8-4e29-8ac9-bbfe4624214b",
+							"id": "b52fcab2-ee2c-4bb2-ba99-ff0429e11639",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -47,7 +47,7 @@
 							},
 							"response": [
 								{
-									"id": "9c38e85e-fe27-4981-bcbc-7489b12d9972",
+									"id": "c0e13ba4-677f-400c-809c-02c08a77f201",
 									"name": "Recipe details",
 									"originalRequest": {
 										"method": "GET",
@@ -58,21 +58,18 @@
 											}
 										],
 										"url": {
-											"raw": "https://api.bakery.local/v1/recipes/:id",
-											"protocol": "https",
+											"raw": "{{baseUrl}}/recipes/:id",
 											"host": [
-												"api",
-												"bakery",
-												"local"
+												"{{baseUrl}}"
 											],
 											"path": [
-												"v1",
 												"recipes",
 												":id"
 											],
 											"variable": [
 												{
-													"key": "id"
+													"key": "id",
+													"value": "933c35b5-eff2-43c4-ad7f-6c4164242051"
 												}
 											]
 										}
@@ -83,15 +80,14 @@
 									"header": [
 										{
 											"key": "Content-Type",
-											"value": "application/json",
-											"uuid": "4cec67ee-4824-434c-b448-2b662bde2905"
+											"value": "application/json"
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+									"body": "{\n  \"name\": \"TestRecipe0\",\n  \"ingredients\": [\n    \"TestIng1\",\n    \"TestIng2\"\n  ],\n  \"complexity\": \"easy\",\n  \"id\": \"e2952c73-e277-4073-a248-105119513080\",\n  \"description\": \"Test Recipe Fetch by ID\",\n  \"steps\": [\n    \"Create Recipe\",\n    \"Save Recipe\"\n  ]\n}"
 								},
 								{
-									"id": "4dbdcc14-cf37-4618-b546-932e0d903154",
+									"id": "029f6579-5b78-4d32-b873-b7f9d75e5e88",
 									"name": "Recipe not found",
 									"originalRequest": {
 										"method": "GET",
@@ -107,7 +103,8 @@
 											],
 											"variable": [
 												{
-													"key": "id"
+													"key": "id",
+													"value": "2050ce57-1d04-4701-b33b-b6188a8c83df"
 												}
 											]
 										}
@@ -116,14 +113,13 @@
 									"code": 404,
 									"_postman_previewlanguage": "text",
 									"header": [],
-									"cookie": [],
-									"body": null
+									"cookie": []
 								}
 							]
 						},
 						{
 							"name": "Update a recipe",
-							"id": "6f5d6468-664c-4e87-aa9a-214efb15baaf",
+							"id": "4421088c-cb62-4f1c-ac03-beef0a168e93",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -137,7 +133,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"easy\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -165,7 +161,7 @@
 							},
 							"response": [
 								{
-									"id": "46d0adf8-5a1d-47e2-be06-705d7cb3c818",
+									"id": "770e59fa-dd7e-4a41-8729-20f48ae56fd0",
 									"name": "Recipe updated",
 									"originalRequest": {
 										"method": "PUT",
@@ -177,7 +173,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+											"raw": "{\n  \"name\": \"TestRecipe3\",\n  \"ingredients\": [\n    \"TestIng1\",\n    \"TestIng2\"\n  ],\n  \"complexity\": \"easy\",\n  \"id\": \"3\",\n  \"description\": \"Test Recipe Update\",\n  \"steps\": [\n    \"Update Recipe\",\n    \"Save Recipe\"\n  ]\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -186,15 +182,11 @@
 											}
 										},
 										"url": {
-											"raw": "https://api.bakery.local/v1/recipes/:id",
-											"protocol": "https",
+											"raw": "{{baseUrl}}/recipes/:id",
 											"host": [
-												"api",
-												"bakery",
-												"local"
+												"{{baseUrl}}"
 											],
 											"path": [
-												"v1",
 												"recipes",
 												":id"
 											],
@@ -209,14 +201,13 @@
 									"code": 200,
 									"_postman_previewlanguage": "text",
 									"header": [],
-									"cookie": [],
-									"body": null
+									"cookie": []
 								}
 							]
 						},
 						{
 							"name": "Delete a recipe",
-							"id": "66fc502f-ec22-4a76-8312-16f131a9c130",
+							"id": "469dda92-920f-4a09-ac10-a08280bcf9dc",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -243,27 +234,24 @@
 							},
 							"response": [
 								{
-									"id": "ab0efd86-8e2c-46e3-b2ea-6187a9915d2a",
+									"id": "223fb141-6ed3-4e12-bbe0-225930eceafe",
 									"name": "Recipe deleted",
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "https://api.bakery.local/v1/recipes/:id",
-											"protocol": "https",
+											"raw": "{{baseUrl}}/recipes/:id",
 											"host": [
-												"api",
-												"bakery",
-												"local"
+												"{{baseUrl}}"
 											],
 											"path": [
-												"v1",
 												"recipes",
 												":id"
 											],
 											"variable": [
 												{
-													"key": "id"
+													"key": "id",
+													"value": "d3a6e2e8-b581-4344-a8b1-90218024cb88"
 												}
 											]
 										}
@@ -272,17 +260,16 @@
 									"code": 204,
 									"_postman_previewlanguage": "text",
 									"header": [],
-									"cookie": [],
-									"body": null
+									"cookie": []
 								}
 							]
 						}
 					],
-					"id": "c000900e-96b2-44f6-902c-662e0c17663b"
+					"id": "ea7c9e4f-b92b-48b6-bca1-86d8a6201523"
 				},
 				{
 					"name": "Get all recipes",
-					"id": "d3e92f97-8ade-4a84-bc42-4284bef45c2d",
+					"id": "6468d969-4a91-4e76-a102-f04bae8dc65b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -295,19 +282,18 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/v1/recipes",
+							"raw": "{{baseUrl}}/recipes",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"v1",
 								"recipes"
 							]
 						}
 					},
 					"response": [
 						{
-							"id": "7e81fc26-983c-42b5-8592-71b05f75bbd6",
+							"id": "c730f493-6ea8-49b9-a8bc-a8d1d4658e8b",
 							"name": "A list of recipes",
 							"originalRequest": {
 								"method": "GET",
@@ -318,12 +304,11 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/v1/recipes",
+									"raw": "{{baseUrl}}/recipes",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1",
 										"recipes"
 									]
 								}
@@ -334,18 +319,17 @@
 							"header": [
 								{
 									"key": "Content-Type",
-									"value": "application/json",
-									"uuid": "d5619ee7-83b1-4d06-a440-bef5e1215e45"
+									"value": "application/json"
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"name\": \"TestRecipe1\",\n    \"ingredients\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"complexity\": \"medium\",\n    \"id\": \"<string>\",\n    \"description\": \"<string>\",\n    \"steps\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  {\n    \"name\": \"<string>\",\n    \"ingredients\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"complexity\": \"easy\",\n    \"id\": \"<string>\",\n    \"description\": \"<string>\",\n    \"steps\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n]"
+							"body": "[\n  {\n  \"name\": \"TestRecipe0\",\n  \"ingredients\": [\n    \"TestIng1\",\n    \"TestIng2\"\n  ],\n  \"complexity\": \"easy\",\n  \"id\": \"394a5f30-c84c-4b45-ac17-4752b735a328\",\n  \"description\": \"Test Recipe 0\",\n  \"steps\": [\n    \"Step1\",\n    \"Step2\"\n  ]\n},\n  {\n  \"name\": \"TestRecipe1\",\n  \"ingredients\": [\n    \"TestIng1\",\n    \"TestIng2\"\n  ],\n  \"complexity\": \"easy\",\n  \"id\": \"6d7bfdbd-0d91-4e69-8d78-a1897fcdfd52\",\n  \"description\": \"Test Recipe 1\",\n  \"steps\": [\n    \"Step1\",\n    \"Step2\"\n  ]\n}\n]"
 						}
 					]
 				},
 				{
 					"name": "Create a new recipe",
-					"id": "adefd262-1109-478f-bab7-2e8ca11edbcd",
+					"id": "b790a195-2e4c-4bab-9039-940f17f7a227",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -359,7 +343,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"easy\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -379,19 +363,14 @@
 					},
 					"response": [
 						{
-							"id": "8ab2a786-43f0-4868-b873-984afc0b0cb1",
+							"id": "943a5935-2efa-4ba6-b14f-af520fd4cf0d",
 							"name": "Recipe created",
 							"originalRequest": {
 								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
+								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"TestRecipe2\",\n  \"ingredients\": [\n    \"TestIng1\",\n    \"TestIng2\"\n  ],\n  \"complexity\": \"easy\",\n  \"id\": \"2\",\n  \"description\": \"Test Recipe Create\",\n  \"steps\": [\n    \"Create Recipe\",\n    \"Save Recipe\"\n  ]\n}",
+									"raw": "{\n  \"name\": \"TestRecipe4\",\n  \"ingredients\": [\n    \"TestIng1\",\n    \"TestIng2\"\n  ],\n  \"complexity\": \"medium\",\n  \"id\": \"e31f0fa2-f84f-42d5-a44e-c6ec2a936f7a\",\n  \"description\": \"Test Recipe Create\",\n  \"steps\": [\n    \"Create Recipe\",\n    \"Save Recipe\"\n  ]\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -400,34 +379,32 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/v1/recipes",
+									"raw": "{{baseUrl}}/recipes",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"v1",
 										"recipes"
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
+							"status": "Created",
+							"code": 201,
 							"_postman_previewlanguage": "text",
 							"header": [],
-							"cookie": [],
-							"body": null
+							"cookie": []
 						}
 					]
 				}
 			],
-			"id": "8f58b8f9-d3e1-40c7-a33b-21b5b4612de5"
+			"id": "a524d348-c14a-465a-9fb0-5996cf200fda"
 		},
 		{
 			"name": "equipments",
 			"item": [
 				{
 					"name": "Get all equipments",
-					"id": "0eda3bb5-fd71-4e37-a235-267f7a20667d",
+					"id": "dd0b0837-aae1-481a-b449-d8b70dc85533",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -451,7 +428,7 @@
 					},
 					"response": [
 						{
-							"id": "3acb51f8-0f2e-421f-b597-36658535bdc7",
+							"id": "0e34c075-31e8-4586-8f1f-d35f2d270294",
 							"name": "A list of equipments",
 							"originalRequest": {
 								"method": "GET",
@@ -462,15 +439,11 @@
 									}
 								],
 								"url": {
-									"raw": "https://api.bakery.local/v1/equipments",
-									"protocol": "https",
+									"raw": "{{baseUrl}}/equipments",
 									"host": [
-										"api",
-										"bakery",
-										"local"
+										"{{baseUrl}}"
 									],
 									"path": [
-										"v1",
 										"equipments"
 									]
 								}
@@ -481,15 +454,14 @@
 							"header": [
 								{
 									"key": "Content-Type",
-									"value": "application/json",
-									"uuid": "12ce6951-f83f-438a-a2ca-599b6cb2714f"
+									"value": "application/json"
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"name\": \"<string>\",\n    \"id\": \"<string>\",\n    \"description\": \"<string>\",\n    \"quantity\": \"<integer>\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"id\": \"<string>\",\n    \"description\": \"<string>\",\n    \"quantity\": \"<integer>\"\n  }\n]"
+							"body": "[\n  {\n    \"name\": \"Equipment1\",\n    \"id\": \"fea5950f-03db-46d8-b363-39cb15fc0f4c\",\n    \"description\": \"Test Equipment 1\",\n    \"quantity\": \"10\"\n  },\n  {\n    \"name\": \"Equipment2\",\n    \"id\": \"4f5c882c-9318-4297-9538-917ac8d74775\",\n    \"description\": \"Test Equipment 2\",\n    \"quantity\": \"20\"\n  }\n]"
 						},
 						{
-							"id": "57f9f429-679d-4dc4-b2ef-a9b4e57bffcb",
+							"id": "3175cf69-40b7-451b-8ccd-06d4e0e16ba5",
 							"name": "Bad request",
 							"originalRequest": {
 								"method": "GET",
@@ -515,18 +487,17 @@
 							"header": [
 								{
 									"key": "Content-Type",
-									"value": "application/json",
-									"uuid": "5a85d9b8-9688-45b8-a27d-c8375ea22ce7"
+									"value": "application/json"
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"status\": \"<integer>\",\n  \"description\": \"<string>\"\n}"
+							"body": "{\n  \"status\": \"<integer>\",\n  \"description\": \"Bad Request\"\n}"
 						}
 					]
 				},
 				{
-					"name": "Create a new recipe",
-					"id": "256cb5a0-44ce-4ebc-88a4-9b6d904bf25f",
+					"name": "Create a new equipment",
+					"id": "65db00d3-4289-4c68-9ec1-8305dfa3fa67",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -542,16 +513,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{baseUrl}}/equipments",
 							"host": [
@@ -564,36 +525,33 @@
 					},
 					"response": [
 						{
-							"id": "b99d6c59-2fc7-462d-8554-747280cde85d",
-							"name": "Recipe created",
+							"id": "3a24d7b9-d1e7-4228-8031-3ed2f16906de",
+							"name": "Equipment is created",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json"
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+									"raw": "{\n    \"name\": \"Equipment3\",\n    \"id\": \"c1d6fd2b-ee3d-49f7-b0fc-0cf1bc07286a\",\n    \"description\": \"Test Equipment Created\",\n    \"quantity\": \"30\"\n  }",
 									"options": {
 										"raw": {
-											"headerFamily": "json",
 											"language": "json"
 										}
 									}
 								},
 								"url": {
-									"raw": "https://api.bakery.local/v1/equipments",
-									"protocol": "https",
+									"raw": "{{baseUrl}}/equipments",
 									"host": [
-										"api",
-										"bakery",
-										"local"
+										"{{baseUrl}}"
 									],
 									"path": [
-										"v1",
 										"equipments"
 									]
 								}
@@ -602,34 +560,19 @@
 							"code": 201,
 							"_postman_previewlanguage": "text",
 							"header": [],
-							"cookie": [],
-							"body": null
+							"cookie": []
 						},
 						{
-							"id": "87e5fdae-e336-4ef6-9575-0bf2d1a539d7",
+							"id": "781f4cf3-20f7-4f43-99ff-928b1f7ddf8e",
 							"name": "Bad request",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
 									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
 										"key": "Accept",
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-									"options": {
-										"raw": {
-											"headerFamily": "json",
-											"language": "json"
-										}
-									}
-								},
 								"url": {
 									"raw": "{{baseUrl}}/equipments",
 									"host": [
@@ -646,8 +589,7 @@
 							"header": [
 								{
 									"key": "Content-Type",
-									"value": "application/json",
-									"uuid": "d95af4fe-a258-44f6-a399-8a9871ae4c47"
+									"value": "application/json"
 								}
 							],
 							"cookie": [],
@@ -656,14 +598,15 @@
 					]
 				}
 			],
-			"id": "f24250a2-86fa-4b08-90a2-99a925e72589"
+			"id": "c5ec1fd6-1e1e-45ce-90a7-83b5a5b5eb7d"
 		}
 	],
 	"variable": [
 		{
-			"id": "b07c51a4-156a-4c3e-b807-0eae76ec4e10",
+			"id": "8b5bab98-9602-4b69-bd98-ae8fef8a7209",
 			"key": "baseUrl",
-			"value": "https://api.bakery.local/v1"
+			"value": "https://api.bakery.local/v1",
+			"type": "any"
 		}
 	]
 }
