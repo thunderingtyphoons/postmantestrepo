@@ -410,8 +410,8 @@
 									]
 								}
 							},
-							"status": "Created",
-							"code": 201,
+							"status": "OK",
+							"code": 200,
 							"_postman_previewlanguage": "text",
 							"header": [],
 							"cookie": [],
