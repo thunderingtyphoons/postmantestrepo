@@ -1,0 +1,103 @@
+openapi: 3.0.3
+info:
+  title: Bakery Recipe Management API
+  description: API for managing recipes in a bakery system
+  version: 1.0.0
+servers:
+  - url: https://api.bakery.local/v1
+paths:
+  /recipes:
+    get:
+      summary: Get all recipes
+      responses:
+        '200':
+          description: A list of recipes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recipe'
+    post:
+      summary: Create a new recipe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Recipe'
+      responses:
+        '201':
+          description: Recipe created
+
+  /recipes/{id}:
+    get:
+      summary: Get a recipe by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Recipe details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+        '404':
+          description: Recipe not found
+
+    put:
+      summary: Update a recipe
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Recipe'
+      responses:
+        '200':
+          description: Recipe updated
+
+    delete:
+      summary: Delete a recipe
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Recipe deleted
+
+components:
+  schemas:
+    Recipe:
+      type: object
+      required:
+        - name
+        - ingredients
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        ingredients:
+          type: array
+          items:
+            type: string
+        steps:
+          type: array
+          items:
+            type: string
