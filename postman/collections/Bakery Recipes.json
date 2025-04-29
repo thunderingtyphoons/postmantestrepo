@@ -1,0 +1,669 @@
+{
+	"info": {
+		"_postman_id": "6d0a8106-6c66-47a8-86f0-62af4943cb4c",
+		"name": "Bakery Recipes",
+		"description": "API for managing recipes in a bakery system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "44538706-6d0a8106-6c66-47a8-86f0-62af4943cb4c"
+	},
+	"item": [
+		{
+			"name": "recipes",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Get a recipe by ID",
+							"id": "46df9010-6df8-4e29-8ac9-bbfe4624214b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/recipes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"recipes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "9c38e85e-fe27-4981-bcbc-7489b12d9972",
+									"name": "Recipe details",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://api.bakery.local/v1/recipes/:id",
+											"protocol": "https",
+											"host": [
+												"api",
+												"bakery",
+												"local"
+											],
+											"path": [
+												"v1",
+												"recipes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "4cec67ee-4824-434c-b448-2b662bde2905"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+								},
+								{
+									"id": "4dbdcc14-cf37-4618-b546-932e0d903154",
+									"name": "Recipe not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/recipes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"recipes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Update a recipe",
+							"id": "6f5d6468-664c-4e87-aa9a-214efb15baaf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/recipes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"recipes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "46d0adf8-5a1d-47e2-be06-705d7cb3c818",
+									"name": "Recipe updated",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api.bakery.local/v1/recipes/:id",
+											"protocol": "https",
+											"host": [
+												"api",
+												"bakery",
+												"local"
+											],
+											"path": [
+												"v1",
+												"recipes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Delete a recipe",
+							"id": "66fc502f-ec22-4a76-8312-16f131a9c130",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/recipes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"recipes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "ab0efd86-8e2c-46e3-b2ea-6187a9915d2a",
+									"name": "Recipe deleted",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://api.bakery.local/v1/recipes/:id",
+											"protocol": "https",
+											"host": [
+												"api",
+												"bakery",
+												"local"
+											],
+											"path": [
+												"v1",
+												"recipes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "c000900e-96b2-44f6-902c-662e0c17663b"
+				},
+				{
+					"name": "Get all recipes",
+					"id": "d3e92f97-8ade-4a84-bc42-4284bef45c2d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1/recipes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"recipes"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "7e81fc26-983c-42b5-8592-71b05f75bbd6",
+							"name": "A list of recipes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/recipes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"recipes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "d5619ee7-83b1-4d06-a440-bef5e1215e45"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"name\": \"TestRecipe1\",\n    \"ingredients\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"complexity\": \"medium\",\n    \"id\": \"<string>\",\n    \"description\": \"<string>\",\n    \"steps\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  {\n    \"name\": \"<string>\",\n    \"ingredients\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"complexity\": \"easy\",\n    \"id\": \"<string>\",\n    \"description\": \"<string>\",\n    \"steps\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create a new recipe",
+					"id": "adefd262-1109-478f-bab7-2e8ca11edbcd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/recipes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "8ab2a786-43f0-4868-b873-984afc0b0cb1",
+							"name": "Recipe created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"TestRecipe2\",\n  \"ingredients\": [\n    \"TestIng1\",\n    \"TestIng2\"\n  ],\n  \"complexity\": \"easy\",\n  \"id\": \"2\",\n  \"description\": \"Test Recipe Create\",\n  \"steps\": [\n    \"Create Recipe\",\n    \"Save Recipe\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/recipes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"recipes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"id": "8f58b8f9-d3e1-40c7-a33b-21b5b4612de5"
+		},
+		{
+			"name": "equipments",
+			"item": [
+				{
+					"name": "Get all equipments",
+					"id": "0eda3bb5-fd71-4e37-a235-267f7a20667d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/equipments",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"equipments"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "3acb51f8-0f2e-421f-b597-36658535bdc7",
+							"name": "A list of equipments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://api.bakery.local/v1/equipments",
+									"protocol": "https",
+									"host": [
+										"api",
+										"bakery",
+										"local"
+									],
+									"path": [
+										"v1",
+										"equipments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "12ce6951-f83f-438a-a2ca-599b6cb2714f"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"name\": \"<string>\",\n    \"id\": \"<string>\",\n    \"description\": \"<string>\",\n    \"quantity\": \"<integer>\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"id\": \"<string>\",\n    \"description\": \"<string>\",\n    \"quantity\": \"<integer>\"\n  }\n]"
+						},
+						{
+							"id": "57f9f429-679d-4dc4-b2ef-a9b4e57bffcb",
+							"name": "Bad request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/equipments",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"equipments"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "5a85d9b8-9688-45b8-a27d-c8375ea22ce7"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"description\": \"<string>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a new recipe",
+					"id": "256cb5a0-44ce-4ebc-88a4-9b6d904bf25f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/equipments",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"equipments"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "b99d6c59-2fc7-462d-8554-747280cde85d",
+							"name": "Recipe created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.bakery.local/v1/equipments",
+									"protocol": "https",
+									"host": [
+										"api",
+										"bakery",
+										"local"
+									],
+									"path": [
+										"v1",
+										"equipments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"id": "87e5fdae-e336-4ef6-9575-0bf2d1a539d7",
+							"name": "Bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"ingredients\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"complexity\": \"hard\",\n  \"id\": \"<string>\",\n  \"description\": \"<string>\",\n  \"steps\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/equipments",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"equipments"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "d95af4fe-a258-44f6-a399-8a9871ae4c47"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"description\": \"<string>\"\n}"
+						}
+					]
+				}
+			],
+			"id": "f24250a2-86fa-4b08-90a2-99a925e72589"
+		}
+	],
+	"variable": [
+		{
+			"id": "b07c51a4-156a-4c3e-b807-0eae76ec4e10",
+			"key": "baseUrl",
+			"value": "https://api.bakery.local/v1"
+		}
+	]
+}

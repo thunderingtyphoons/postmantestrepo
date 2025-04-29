@@ -9,6 +9,7 @@ id = f2c5a8f8-a5e1-46fa-9846-5286e159fc17
 
 [config.relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"44538706-6d0a8106-6c66-47a8-86f0-62af4943cb4c","path":"Bakery Recipes.json","metaData":{}}
 
 [config.relations.collections.metaData]
 
