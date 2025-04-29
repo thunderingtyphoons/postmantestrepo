@@ -173,7 +173,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"TestRecipe3\",\n  \"ingredients\": [\n    \"TestIng1\",\n    \"TestIng2\"\n  ],\n  \"complexity\": \"easy\",\n  \"id\": \"3\",\n  \"description\": \"Test Recipe Update\",\n  \"steps\": [\n    \"Update Recipe\",\n    \"Save Recipe\"\n  ]\n}",
+											"raw": "{\n  \"name\": \"TestRecipe0\",\n  \"ingredients\": [\n    \"TestIng1\",\n    \"TestIng2\"\n  ],\n  \"complexity\": \"easy\",\n  \"id\": \"394a5f30-c84c-4b45-ac17-4752b735a328\",\n  \"description\": \"Test Recipe Update\",\n  \"steps\": [\n    \"Update Recipe\",\n    \"Save Recipe\"\n  ]\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -192,7 +192,8 @@
 											],
 											"variable": [
 												{
-													"key": "id"
+													"key": "id",
+													"value": "394a5f30-c84c-4b45-ac17-4752b735a328"
 												}
 											]
 										}
@@ -458,7 +459,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"name\": \"Equipment1\",\n    \"id\": \"fea5950f-03db-46d8-b363-39cb15fc0f4c\",\n    \"description\": \"Test Equipment 1\",\n    \"quantity\": \"10\"\n  },\n  {\n    \"name\": \"Equipment2\",\n    \"id\": \"4f5c882c-9318-4297-9538-917ac8d74775\",\n    \"description\": \"Test Equipment 2\",\n    \"quantity\": \"20\"\n  }\n]"
+							"body": "[\n  {\n    \"name\": \"Equipment1\",\n    \"id\": \"fea5950f-03db-46d8-b363-39cb15fc0f4c\",\n    \"description\": \"Test Equipment 1\",\n    \"quantity\": 10\n  },\n  {\n    \"name\": \"Equipment2\",\n    \"id\": \"4f5c882c-9318-4297-9538-917ac8d74775\",\n    \"description\": \"Test Equipment 2\",\n    \"quantity\": 20\n  }\n]"
 						},
 						{
 							"id": "3175cf69-40b7-451b-8ccd-06d4e0e16ba5",
@@ -593,7 +594,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"status\": \"<integer>\",\n  \"description\": \"<string>\"\n}"
+							"body": "{\n  \"status\": \"400\",\n  \"description\": \"Bad Request\"\n}"
 						}
 					]
 				}
