@@ -113,6 +113,24 @@ paths:
               application/json:
                 schema:
                     $ref: '#/components/schemas/ErrorResponse'
+  /equipments/{id}:
+    get:
+      summary: Get an equipment by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Equipment details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equipment'
+        '404':
+          description: Equipment not found
 
 components:
   schemas:
